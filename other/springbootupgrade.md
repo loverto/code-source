@@ -107,3 +107,11 @@ spring-boot-starter-validation
 mybatis-springboot.version
 
 1.3.2 -> 2.1.3
+
+mybatis 
+
+3.4.6 -> 3.5.6
+
+问题
+
+原先keyProperty 可以写错，升级后有校验，keyProperty 必须跟属性名一致

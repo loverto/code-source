@@ -11,3 +11,9 @@ alias runlike="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assa
 使用命令
 
 runlike YOUR-CONTAINER
+
+## window 下docker 挂在卷
+
+```yaml
+-v: /e/work/:/data/work
+```
