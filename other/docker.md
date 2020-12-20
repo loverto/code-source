@@ -17,3 +17,7 @@ runlike YOUR-CONTAINER
 ```yaml
 -v: /e/work/:/data/work
 ```
+
+## Docker window 10 上数据目录的迁移  wsl 2
+
+https://github.com/docker/for-win/issues/7348
