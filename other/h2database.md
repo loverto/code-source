@@ -1,12 +1,17 @@
 ## 导出CSV
 
+```shell
 curl http://www.h2database.com/h2-2019-10-14.zip -o h2.zip \
 && unzip h2.zip -d . \
 && rm h2.zip
 
 dd if=/data/xintonglu/newpathway.mv.db of=/data/docker/newpathway.mv.db
 
+```
+
 ## 进入控制台
+```shell
+
 
 java -cp /data/docker/h2/bin/h2-*.jar org.h2.tools.Shell
 
@@ -36,3 +41,10 @@ call CSVWRITE('/data/docker/bak/OFFICIAL_GALLERY.csv','select * from OFFICIAL_GA
 call CSVWRITE('/data/docker/bak/RECOMMENDED_STATUS.csv','select * from RECOMMENDED_STATUS ','charset=UTF-8 fieldSeparator=;');
 call CSVWRITE('/data/docker/bak/UPLOAD_SETTINGS.csv','select * from UPLOAD_SETTINGS ','charset=UTF-8 fieldSeparator=;');
 call CSVWRITE('/data/docker/bak/USER_EXTENDS.csv','select * from USER_EXTENDS ','charset=UTF-8 fieldSeparator=;');
+```
+
+## 参考资料
+
+http://www.h2database.com/html/tutorial.html?highlight=csv&search=csv#firstFound
+
+http://www.h2database.com/html/functions.html#csvwrite
