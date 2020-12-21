@@ -10,10 +10,15 @@ docker run --rm -v /e/wsl/:/liquibase/changelog -v /e/wsl/newpathway.mv.db:/liqu
 
 ## 更新语句
 docker run --rm -v /e/workspace/jhipster/new-pathway/build/h2db/db/:/liquibase/changelog -v /e/workspace/jhipster/new-pathway/build/h2db/db/newpathway.mv.db:/liquibase/newpathway.mv.db liquibase/liquibase:4.2 --url=jdbc:postgresql://192.168.56.1:5432/NewPathway  --username=NewPathway  --password=  --changeLogFile=pgchangelog.xml  update
+## mac 更新语句
+docker run --rm -v /Users/yinlongfei/workspace/new-pathway:/liquibase/changelog liquibase/liquibase:4.2 --url=jdbc:postgresql://192.168.1.5:5432/NewPathway  --username=NewPathway  --password=  --changeLogFile=pgchangelog.xml  update
 
 
 liquibase \
 --url=jdbc:h2:file:/liquibase/newpathway;DB_CLOSE_DELAY=-1;  --username=NewPathway  --password=  --changeLogFile=/liquibase/changelog/changelog.xml diffChangeLog   --referenceUrl=jdbc:postgresql://localhost:5432/NewPathway --referenceUsername=NewPathway --referencePassword=
+
+
+docker run --rm -v /data/xintonglu/:/liquibase/changelog -v /data/xintonglu/newpathway.mv.db:/liquibase/newpathway.mv.db liquibase/liquibase:4.2 --url=jdbc:postgresql://172.17.189.23:5432/NewPathway  --username=NewPathway  --password=  --changeLogFile=pgchangelog.xml  update
 
 
 ## Linux 中文件权限问题
