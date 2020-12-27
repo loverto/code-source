@@ -41,3 +41,31 @@ crontab任务配置基本格式：
 
 0 23 * * 6 /usr/local/etc/rc.d/lighttpd restart
 上面的例子表示每星期六的11 : 00 pm重启apache。
+
+## curl proxy 
+
+```shell
+# 指定http代理IP和端口
+curl -x 113.185.19.192:80 http://aiezu.com/test.php
+curl --proxy 113.185.19.192:80 http://aiezu.com/test.php
+ 
+#指定为http代理
+curl -x http_proxy://113.185.19.192:80 http://aiezu.com/test.php
+ 
+#指定为https代理
+curl -x HTTPS_PROXY://113.185.19.192:80 http://aiezu.com/test.php
+ 
+#指定代理用户名和密码，basic认证方式
+curl -x aiezu:123456@113.185.19.192:80 http://aiezu.com/test.php
+curl -x 113.185.19.192:80 -U aiezu:123456 http://aiezu.com/test.php
+curl -x 113.185.19.192:80 --proxy-user aiezu:123456 http://aiezu.com/test.php
+ 
+#指定代理用户名和密码，ntlm认证方式
+curl -x 113.185.19.192:80 -U aiezu:123456 --proxy-ntlm http://aiezu.com/test.php
+ 
+#指定代理协议、用户名和密码，basic认证方式
+curl -x http_proxy://aiezu:123456@113.185.19.192:80 http://aiezu.com/test.php
+
+```
+
+https://www.cnblogs.com/panxuejun/p/10574038.html
