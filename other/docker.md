@@ -21,3 +21,21 @@ runlike YOUR-CONTAINER
 ## Docker window 10 上数据目录的迁移  wsl 2
 
 https://github.com/docker/for-win/issues/7348
+
+
+## 解决docker容器无法访问宿主机端口的问题 No route to host 处理方法
+
+请顺序运行以下命令：
+
+```shell
+nmcli connection modify docker0 connection.zone trusted
+
+systemctl stop NetworkManager.service
+firewall-cmd --permanent --zone=trusted --change-interface=docker0
+systemctl start NetworkManager.service
+nmcli connection modify docker0 connection.zone trusted
+systemctl restart docker.service
+```
+
+
+https://blog.csdn.net/iouczp/article/details/80300500?utm_source=blogkpcl4
