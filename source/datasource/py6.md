@@ -1,5 +1,7 @@
 # P6spy 源码分析
 
+https://github.com/gavlyukovskiy/spring-boot-data-source-decorator
+
 p6spy 如何自己实现一个类似的工具？
 
 ## 加载配置文件
