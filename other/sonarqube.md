@@ -11,6 +11,8 @@
 
 sonar-gitlab-plugin
 
+https://juejin.cn/post/6855511047026475015
+
 
 ## 多分支支持
 
@@ -18,8 +20,14 @@ sonarqube-community-branch-plugin
 
 https://www.cnblogs.com/daodaotest/p/13164513.html
 
+## sonarqube 集成阿里巴巴规约
+
+https://www.cnblogs.com/shenh/p/13674450.html
+
 
 ## 参考资料
+
+https://www.cnblogs.com/shenh/p/13674450.html
 
 https://juejin.cn/post/6855511047026475015
 
